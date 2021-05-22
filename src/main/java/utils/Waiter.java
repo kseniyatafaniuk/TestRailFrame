@@ -2,6 +2,7 @@ package utils;
 
 import core.BrowserService;
 import core.PropertyReader;
+import core.PropertyReader_old;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,7 +14,7 @@ public class Waiter {
 
     public Waiter(BrowserService browserService) {
 //        this.browserService = browserService;
-        this.wait = new WebDriverWait(browserService.getDriver(), new PropertyReader().getTimeOut());
+        this.wait = new WebDriverWait(browserService.getDriver(), PropertyReader.getTimeOut());
     }
 
     public Waiter(BrowserService browserService, int timeOut) {
@@ -22,10 +23,10 @@ public class Waiter {
     }
 
     public WebElement waitForVisibility(By by){
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        return this.wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
     public WebElement waitForVisibility(WebElement webElement){
-        return wait.until(ExpectedConditions.visibilityOf(webElement));
+        return this.wait.until(ExpectedConditions.visibilityOf(webElement));
     }
 }

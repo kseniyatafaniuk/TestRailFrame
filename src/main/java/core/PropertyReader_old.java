@@ -3,28 +3,29 @@ package core;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertyReader {
+public class PropertyReader_old {
 
-    private static final Properties properties;
+    protected Properties properties;
 
-    static {
+    public PropertyReader_old() {
         properties = new Properties();
         try {
-            properties.load(PropertyReader.class.getClassLoader().getResourceAsStream("config.properties"));
+            properties.load(getClass().getClassLoader().getResourceAsStream("config.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static String getUrl() {
+    public String getUrl() {
         return properties.getProperty("url");
     }
 
-    public static String getBrowserName() {
+    public String getBrowserName() {
         return properties.getProperty("browser");
     }
 
-    public static int getTimeOut() {
+    public int getTimeOut() {
         return Integer.parseInt(properties.getProperty("timeout"));
     }
+
 }

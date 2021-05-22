@@ -23,22 +23,22 @@ public class LoginPage extends BasePage {
     }
 
     public WebElement getEmailInput() {
-        return this.driver.findElement(emailInputBy);
+        return this.browserService.getDriver().findElement(emailInputBy);
     }
 
     public WebElement getPassInput() {
-        return this.driver.findElement(passInputBy);
+        return this.browserService.getDriver().findElement(passInputBy);
     }
 
     public WebElement getLoginBtn() {
-        return this.driver.findElement(loginButtonBy);
+        return this.browserService.getDriver().findElement(loginButtonBy);
     }
 
     public WebElement getErrorLabel() {
-        return this.driver.findElement(errorLabelBy);
+        return this.browserService.getDriver().findElement(errorLabelBy);
     }
 
     public WebElement getFieldError() {
-        return this.driver.findElement(fieldErrorBy);
+        return this.browserService.getDriver().findElement(fieldErrorBy);
     }
 }

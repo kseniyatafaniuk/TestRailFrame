@@ -13,19 +13,17 @@ public class BrowserService {
     private WebDriver driver;
 
     public BrowserService() {
-        PropertyReader propertyReader = new PropertyReader();
-
         DriverManagerType driverManagerType;
-        switch (propertyReader.getBrowserName().toLowerCase()) {
+        switch (PropertyReader.getBrowserName().toLowerCase()) {
             case "chrome" -> {
                 driverManagerType = DriverManagerType.CHROME;
                 WebDriverManager.getInstance(driverManagerType).setup();
-                driver = new ChromeDriver();
+                this.driver = new ChromeDriver();
             }
             case "firefox" -> {
                 driverManagerType = DriverManagerType.FIREFOX;
                 WebDriverManager.getInstance(driverManagerType).setup();
-                driver = new FirefoxDriver();
+                this.driver = new FirefoxDriver();
             }
             case "ie" -> driverManagerType = DriverManagerType.IEXPLORER;
             case "safari" -> driverManagerType = DriverManagerType.SAFARI;
