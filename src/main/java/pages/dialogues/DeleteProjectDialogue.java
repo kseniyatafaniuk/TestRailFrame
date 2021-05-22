@@ -14,7 +14,7 @@ public class DeleteProjectDialogue extends BasePage {
 
 
     public DeleteProjectDialogue(BrowserService browserService) {
-        super(browserService,"");
+        super(browserService,null);
     }
 
     @Override

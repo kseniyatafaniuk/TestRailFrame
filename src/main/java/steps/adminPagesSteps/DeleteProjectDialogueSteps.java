@@ -1,8 +1,7 @@
-package steps;
+package steps.adminPagesSteps;
 
 import baseEntitites.BaseStep;
 import core.BrowserService;
-import pages.AdminProjectsPage;
 import pages.dialogues.DeleteProjectDialogue;
 
 public class DeleteProjectDialogueSteps extends BaseStep<DeleteProjectDialogue> {
@@ -12,7 +11,7 @@ public class DeleteProjectDialogueSteps extends BaseStep<DeleteProjectDialogue> 
     }
 
     @Override
-    public DeleteProjectDialogueSteps openPage() { //применимо ли для диалога?
+    public DeleteProjectDialogueSteps openPage() {
         this.page.open();
         return this;
     }

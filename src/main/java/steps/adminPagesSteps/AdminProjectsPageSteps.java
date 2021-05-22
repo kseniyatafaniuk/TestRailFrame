@@ -1,10 +1,9 @@
-package steps;
+package steps.adminPagesSteps;
 
 import baseEntitites.BaseStep;
 import core.BrowserService;
 import models.Project;
-import org.openqa.selenium.JavascriptExecutor;
-import pages.AdminProjectsPage;
+import pages.adminPages.AdminProjectsPage;
 
 public class AdminProjectsPageSteps extends BaseStep<AdminProjectsPage> {
 

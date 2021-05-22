@@ -1,10 +1,11 @@
-package pages;
+package pages.adminPages;
 
 import core.BrowserService;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.adminPages.AdminSidebar;
 
-public class AddEditProjectPage extends AdminSidebarPage {
+public class AddEditProjectPage extends AdminSidebar {
 
     private static final By nameInputBy = By.id("name");
     private static final By announcementInputBy = By.id("announcement");
@@ -36,4 +37,8 @@ public class AddEditProjectPage extends AdminSidebarPage {
         return this.browserService.getDriver().findElement(By.xpath(String.format(selectProjectTypeRadioBttnLocator, value)));
     }
 
+    @Override
+    protected By getPageOpenedIndicatorLocator() {
+        return nameInputBy;
+    }
 }

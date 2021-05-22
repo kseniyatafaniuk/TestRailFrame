@@ -1,9 +1,9 @@
-package steps;
+package steps.adminPagesSteps;
 
 import baseEntitites.BaseStep;
 import core.BrowserService;
 import models.Project;
-import pages.AddEditProjectPage;
+import pages.adminPages.AddEditProjectPage;
 
 public class AddEditProjectPageSteps extends BaseStep<AddEditProjectPage> {
 

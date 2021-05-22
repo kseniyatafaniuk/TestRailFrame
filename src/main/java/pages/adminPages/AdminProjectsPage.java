@@ -1,4 +1,4 @@
-package pages;
+package pages.adminPages;
 
 import core.BrowserService;
 import org.openqa.selenium.By;
@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class AdminProjectsPage extends AdminSidebarPage {
+public class AdminProjectsPage extends AdminSidebar {
 
     private static final By successMessageBy = By.cssSelector(".message.message-success");
     private static final By projectsNameLinkBy = By.xpath("//tbody/descendant::a[normalize-space()]");
@@ -19,6 +19,11 @@ public class AdminProjectsPage extends AdminSidebarPage {
 
     public AdminProjectsPage(BrowserService browserService) {
         super(browserService, "/admin/projects/overview");
+    }
+
+    @Override
+    protected By getPageOpenedIndicatorLocator() {
+        return By.xpath(String.format(pageTitleLocator, "Projects"));
     }
 
     public WebElement getProjectInTheListByName(String projectName) {

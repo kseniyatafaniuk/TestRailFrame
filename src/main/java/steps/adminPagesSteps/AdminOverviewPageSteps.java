@@ -1,9 +1,8 @@
-package steps;
+package steps.adminPagesSteps;
 
 import baseEntitites.BaseStep;
 import core.BrowserService;
-import pages.AdminOverviewPage;
-import pages.AdminProjectsPage;
+import pages.adminPages.AdminOverviewPage;
 
 public class AdminOverviewPageSteps extends BaseStep<AdminOverviewPage> {
 
